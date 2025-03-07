@@ -152,6 +152,205 @@ body {
     border: none;
 }
 
+/* styles.css */
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    flex: 1;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 18px 8px 8px;
+    border-radius: 6px;
+}
+
+.search-field {
+    flex: 2;
+    min-width: 120px;
+}
+
+.search-field input {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+
+.category-field {
+    flex: 1;
+    min-width: 100px;
+}
+
+.category-field select {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+
+.price-field-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.price-field-group input {
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+
+.search-button {
+    padding: 8px 15px;
+    white-space: nowrap;
+}
+
+.search-button i {
+    margin-right: 5px;
+}
+
+.quick-links {
+    padding-left: 20px; /* Adjust the value as needed */
+}
+
+@media (max-width: 768px) {
+    .quick-links {
+        padding-left: 15px; /* Adjust for smaller screens if needed */
+    }
+}
+
+@media (max-width: 992px) {
+    .search-filter-container {
+        margin: 10px 0;
+    }
+
+    .search-input-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-field,
+    .category-field,
+    .price-field-group,
+    .search-button {
+        width: 100%;
+    }
+
+    .price-field-group {
+        justify-content: space-between;
+    }
+}
+
+/* styles.css */
+.search-container {
+    padding: 15px;
+    max-width: 100%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.category-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.price-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.price-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 80px;
+    max-width: calc(50% - 15px);
+}
+
+.price-separator {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.search-button {
+    width: 100%;
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .price-range {
+        flex-wrap: nowrap;
+    }
+
+    .price-input-group {
+        justify-content: space-between;
+    }
+
+    .price-input {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .price-field-group input[type="number"] {
+        width: 100%;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .price-field-group input[type="number"] {
+        width: 100%;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .price-field-group {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .price-field-group input[type="number"] {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
 @media (max-width: 992px) {
     .input-group {
         flex-wrap: wrap;

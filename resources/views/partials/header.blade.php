@@ -20,46 +20,50 @@
                     </li>
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0 mr-3" action="{{ route('home') }}" method="GET">
-                    <div class="input-group">
-                        <input type="text"
-                               class="form-control"
-                               placeholder="Search products..."
-                               name="search"
-                               value="{{ request('search') }}">
-                        <select class="custom-select" name="category_id">
-                            <option value="">All Categories</option>
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}"
-                                    {{ request('category') == $category->id ? 'selected' : '' }}>
-                                    {{ $category->name }}
-                                </option>
-                            @endforeach
-                        </select>
-
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-dark text-light border-light">Price</span>
+                <form class="search-filter-container d-flex flex-wrap" action="{{ route('home') }}" method="GET">
+                    <div class="search-input-group d-flex flex-wrap">
+                        <div class="search-field">
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Search products..."
+                                   name="search"
+                                   value="{{ request('search') }}">
                         </div>
-                        <input type="number"
-                               class="form-control"
-                               placeholder="Min"
-                               name="min_price"
-                               value="{{ request('min_price') }}"
-                               min="0"
-                               step="0.01">
-                        <input type="number"
-                               class="form-control"
-                               placeholder="Max"
-                               name="max_price"
-                               value="{{ request('max_price') }}"
-                               min="0"
-                               step="0.01">
 
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-light" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
+                        <div class="category-field">
+                            <select class="form-control" name="category_id">
+                                <option value="">All Categories</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}"
+                                        {{ request('category') == $category->id ? 'selected' : '' }}>
+                                        {{ $category->name }}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
+
+                        <div class="price-field-group d-flex">
+                            <input type="number"
+                                   class="form-control"
+                                   placeholder="Min"
+                                   name="min_price"
+                                   value="{{ request('min_price') }}"
+                                   min="0"
+                                   step="0.01">
+                            <span class="text-light mx-1">-</span>
+                            <input type="number"
+                                   class="form-control"
+                                   placeholder="Max"
+                                   name="max_price"
+                                   value="{{ request('max_price') }}"
+                                   min="0"
+                                   step="0.01">
+                        </div>
+
+                        <button class="btn btn-outline-light search-button" type="submit">
+                            <i class="fas fa-search"></i>
+                            <span class="d-none d-sm-inline">Search</span>
+                        </button>
                     </div>
                 </form>
 
@@ -74,7 +78,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                role="button" data-toggle="dropdown">
-
+                                <!-- User Icon -->
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="">

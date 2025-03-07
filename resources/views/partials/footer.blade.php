@@ -5,7 +5,7 @@
             <p>Your store description here.</p>
         </div>
 
-        <div class="footer-section">
+        <div class="quick-links">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="">About</a></li>
