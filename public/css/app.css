@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* General Layout */
 body {
     margin: 0;
     padding: 0;
@@ -88,6 +87,16 @@ body {
     padding: 0 1rem;
 }
 
+.footer-bottom {
+    padding: 0 1rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .alert {
     padding: 1rem;
     margin: 1rem 0;
@@ -152,7 +161,6 @@ body {
     border: none;
 }
 
-/* styles.css */
 .search-filter-container {
     display: flex;
     align-items: center;
@@ -213,13 +221,80 @@ body {
     margin-right: 5px;
 }
 
-.quick-links {
-    padding-left: 20px; /* Adjust the value as needed */
+.top-banner {
+    background-color: #343a40;
+    color: white;
+    font-size: 11px;
+    padding: 4px 4px;
 }
 
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 16px;
+}
+
+.utility-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.banner-link {
+    color: white;
+    text-decoration: none;
+}
+
+.banner-link:hover {
+    opacity: 0.8;
+}
+
+.currency-selector {
+    display: flex;
+    align-items: center;
+}
+
+.currency-text {
+    margin-right: 4px;
+}
+
+.dropdown-arrow {
+    font-size: 8px;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .quick-links {
-        padding-left: 15px; /* Adjust for smaller screens if needed */
+    .top-banner {
+        font-size: 10px;
+    }
+
+    .banner-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .utility-links {
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-banner {
+        font-size: 9px;
+    }
+
+    .shipping-text {
+        margin-bottom: 8px;
+    }
+
+    .utility-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
     }
 }
 
